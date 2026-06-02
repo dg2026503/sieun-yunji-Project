@@ -64,3 +64,8 @@ while True :
         j.pos.z = j.pos.z + 1
     if 'x' in k :
         j.pos.z = j.pos.z - 1
+   if abs(d - r.radius) <= 7:
+    print("GAME OVER")
+    j.visible = False
+    gameover = True
+    break
