@@ -64,8 +64,31 @@ while True :
         j.pos.z = j.pos.z + 1
     if 'x' in k :
         j.pos.z = j.pos.z - 1
-   if abs(d - r.radius) <= 7:
-    print("GAME OVER")
-    j.visible = False
-    gameover = True
-    break
+   gameover = False
+
+while not gameover:
+    rate(100)
+
+    k = keysdown()
+
+    if 'left' in k:
+        j.pos.x -= 1
+    if 'right' in k:
+        j.pos.x += 1
+    if 'up' in k:
+        j.pos.y += 1
+    if 'down' in k:
+        j.pos.y -= 1
+    if 'z' in k:
+        j.pos.z += 1
+    if 'x' in k:
+        j.pos.z -= 1
+
+    for r in [ring1, ring2, ring3]:
+        d = mag(j.pos - r.pos)
+
+        # 캐릭터가 링에 닿으면 게임 오버
+        if abs(d - r.radius) <= 7:
+            print("GAME OVER")
+            gameover = True
+            break
