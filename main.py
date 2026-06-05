@@ -2,11 +2,6 @@
 Web VPython 3.2
                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 
-
-
-
-
-
 body= sphere(pos=vec(0, 0, 0), radius=7, color=color.green)
 eye1= sphere(pos=vec(3, 2, 6), radius=0.7, color=color.black)
 eye2= sphere(pos=vec(-3, 2, 6), radius=0.7, color=color.black)
