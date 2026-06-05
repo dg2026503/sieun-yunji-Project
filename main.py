@@ -32,3 +32,9 @@ while True :
     if 'x' in k :
         j.pos.z = j.pos.z - 1
 
+    if -5 < j.pos.y < 5 and -3 < j.pos.x < 3 :
+        j.visible = False
+    
+    if j.pos.z < -1 :
+        j.visible = False
+
